@@ -1,0 +1,101 @@
+﻿@mixin ling{
+    margin: 0;
+    padding: 0;
+}
+@mixin fs($fs){
+    font-size: $fs;
+}
+@mixin fudong{
+    overflow: hidden;
+}
+@mixin lidd{
+    list-style: none;
+}
+@mixin axlx{
+    text-decoration: none;
+}
+@mixin wg($width,$height){
+    width: $width;
+    height: $height;
+}
+@mixin background($color){
+    background-color: $color;
+}
+@mixin color($color){
+    color: $color;
+}
+@mixin dingwei($dw,$top,$left){
+    @if($dw == 1){
+        position: relative;
+    }
+    @if($dw == 2){
+        position: absolute;
+        
+         @if($left){
+           left: $left; 
+        }@else{
+            left: auto;
+        }
+        @if($top){
+            top: $top;
+        }@else{
+            top: auto;
+        } 
+    }
+    @if($dw == 3){
+        position: fixed;
+        top: $top;
+        left: $left;
+    }
+}
+@mixin ol($color){
+    outline: 1px solid $color;
+}
+@mixin fd{
+    overflow: hidden;
+}
+@mixin float($fd){
+    @if($fd == 1){
+        float: left;
+    }@else{
+        float: right;
+    }
+}
+
+@mixin bg{
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@mixin ml($ml){
+    margin-left: $ml;
+}
+@mixin mt($mt){
+    margin-top: $mt;
+}
+@mixin mr($mr){
+    margin-right: $mr;
+}
+@mixin margin($margin){
+    margin:$margin auto;
+}
+@mixin ta{
+    text-align: center;
+}
+@mixin lh($lh){
+    line-height: $lh;
+}
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
