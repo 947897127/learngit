@@ -1,0 +1,145 @@
+.back-img{
+	background:url(../img/bg.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+nav{
+	width: 100%;
+	height: 2.18rem;
+	position: absolute;
+	top: 1.5rem;
+	left: 0;
+}
+nav ul{
+	width: 95%;
+	height: 100%;
+	margin: 0 auto;
+}
+nav ul li{
+	width: 2.87rem;
+	height: 100%;
+	background: url(../img/return.png) no-repeat;
+}
+.mifeng{
+	width: 100%;
+	height: 10.1rem;
+	padding: 1rem 0 1rem 0;
+}
+.mifeng-auto{
+	width: 7.3rem;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	
+}
+.text{
+	width: 1.9rem;
+    height: 3rem;
+    background: #ffffff;
+    position: absolute;
+    top: 4.25rem;
+    left: 3.4rem;
+}
+.danci{
+	width: 100%;
+	height: 8%;
+}
+.danci-auto{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+	width: 50%;
+	height: 100%;
+	margin: 0 auto;
+}
+.icon{
+	width: 4rem;
+	height: 4rem;
+	float: left;
+} 
+.icon img{
+	width: 100%;
+	height: 100%;
+}
+.danci-text{
+	float: left;
+}
+.danci-text p{
+	font-size: 1.2rem;
+	padding: 0.5rem 0 0 2rem;
+}
+.fanpai{
+	width: 100%;
+	height:33%;
+	padding: 6rem 0 0 0;	
+}
+.fanpai-auto{
+  text-align: center;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	display: none;
+}
+.side img{
+	width: 100%;
+	height: 100%;
+	border-radius:40px;
+}
+.two{
+	display: block;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.flip{
+	width: 100%;
+  height: 100%;
+  backface-visibility:hidden;/*背对屏幕时隐藏*/
+  -webkit-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  -ms-backface-visibility:hidden;
+  -o-backface-visibility:hidden;
+  transition: all 1s ease; /*为翻牌添加过渡效果*/
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transform-style: preserve-3d; /*子元素将保留其 3D 位置。*/
+  /*子元素将保留其 3D 位置。*/
+      
+}
+.side{
+  padding: 5px 5px 5px 5px;
+    background-color: #fff;
+    border-radius: 42px;
+ 	  width: 100%;
+ 	  height: 100%;
+    position: absolute;/*让背面和正面重叠*/
+    top: 0;
+    left: 0;
+}
+.front{
+     z-index:222;//让正面朝上
+   }
+.back{
+
+     transform:rotateY(180deg);
+     -webkit-transform:rotateY(180deg);
+     -moz-transform:rotateY(180deg);
+     -ms-transform:rotateY(180deg);
+     -o-transform:rotateY(180deg);
+   }
+.box{
+    display: inline-block;
+   	width: 20%;
+    height: 100%;
+
+    // overflow: hidden;
+    margin-left: 2rem;
+   	perspective:800px;/*perspective属性定义3D元素距视图的距离,以像素计。该属性允许您改变 3D 元素查看 3D 元素的视图。*/
+    -webkit-perspective:800px;
+    -moz-perspective:800px;
+    -ms-perspective:800px;
+    -o-perspective:800px;
+   }
+.jianrong { transform: rotateY(180deg);-webkit-transform: rotateY(180deg);-moz-transform: rotateY(180deg);-ms-transform: rotateY(180deg);-o-transform: rotateY(180deg); z-index:1}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta name="x5-orientation" content="portrait">
+	<link href="css/fenlei2.css" rel="stylesheet" type="text/css"/>
+	<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+	<script src="http://elitechildren.com.cn/js/jquery.js"></script>
+	<link rel="stylesheet" href=" css/swiper.min.css">
+	<script src="js/swiper.js"></script>
+	<script src="js/jquery.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="back-img">
+		<nav>
+			<ul>
+				<li style="display: block;float: left;"></li>
+				<div style="display: block;float: left; height: 100%;line-height: 2.25rem;padding: 0 0 0 1.5rem "><span>1</span>/<span>4</span></div>
+			</ul>
+		</nav>
+		<div class="mifeng">
+			<div class="mifeng-auto">
+				<img src="img/one.png" alt="">
+				<div class="text" style="overflow: hidden;"><div class="swiper-pagination" style="font-size: 2.5rem;bottom: -0.6rem;"></div></div>
+			</div>
+		</div>
+		<div class="danci">
+			<div class="danci-auto">
+				<div class="icon">
+					<img src="img/bf.png" alt="">
+				</div>
+				<div class="danci-text">
+					<p>Look At Picture,Tell Me Story?</p>
+					<p>精彩故事我来讲</p>
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="fenlei">
+			<div class="fenlei-auto" >
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				      <div class="swiper-slide"><img src="img/9.jpg" alt=""></div>
+				      <div class="swiper-slide"><img src="img/8.jpg" alt=""></div>
+				      <div class="swiper-slide"><img src="img/7.jpg" alt=""></div>
+				      <div class="swiper-slide"><img src="img/6.jpg" alt=""></div>
+				    </div>
+				    <!-- Add Arrows -->
+				   
+				  </div>
+				  <div class="btn">
+				   <div class="swiper-button-next swiper-button-white" ></div>
+				   <div class="swiper-button-prev swiper-button-white" ></div>
+					<div class="bttonssss" style="width: 50px;height: 70px;background: red;position: absolute;top: -47px;right: 0;z-index: 999;display: none;"></div>
+				  </div>
+
+			</div>
+
+			
+		</div>	
+	</div>
+</body>
+<script>
+$(function(){
+	 var width=$(window).width()
+ 	 var height=$(window).height()
+ 	 $(".back-img").css({
+ 	 	width:width,
+ 	 	height:height
+ 	 })
+
+ 	  // window.onload=function(){
+ 		// document.onclick=function(ev){
+ 	 // 	var oEvent=ev||event;                
+   //          alert(oEvent.clientX+'，'+oEvent.clientY);//   IE浏览器兼容
+   //      };
+ // }
+ var swiper = new Swiper('.swiper-container', {
+      navigation: {
+      	// direction: 'vertical',
+    	// loop: true,
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        onlyExternal : true,
+
+
+      },
+       pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+
+      },
+ on: {
+    touchStart: function(event){
+      console.log(swiper.activeIndex)
+      if(swiper.activeIndex==2){
+		$(".bttonssss").css({display:"block"})
+	}	
+    },
+  },
+
+    }); 
+
+$(".swiper-button-next").click(function(){
+	console.log(swiper.activeIndex)
+	if(swiper.activeIndex==3){
+		$(".bttonssss").css({display:"block"})
+	}	
+})
+$(".bttonssss").click(function(){
+	alert(1111)
+})
+
+})
+
+</script>
+</html>

@@ -1,0 +1,119 @@
+.back-img{
+	background:url(../img/bg.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+nav{
+	width: 100%;
+	height: 2.18rem;
+	position: absolute;
+	top: 1.5rem;
+	left: 0;
+}
+nav ul{
+	width: 95%;
+	height: 100%;
+	margin: 0 auto;
+}
+nav ul li{
+	width: 2.87rem;
+	height: 100%;
+	background: url(../img/return.png) no-repeat;
+}
+.mifeng{
+	width: 100%;
+	height: 10.1rem;
+	padding: 1rem 0 1rem 0;
+}
+.mifeng-auto{
+	width: 7.3rem;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	
+}
+.text{
+	width: 1.9rem;
+    height: 3rem;
+    background: #ffffff;
+    position: absolute;
+    top: 4.25rem;
+    left: 3.4rem;
+}
+.danci{
+	width: 100%;
+	height: 8%;
+}
+.danci-auto{
+	width: 50%;
+	height: 100%;
+	margin: 0 auto;
+}
+.icon{
+	width: 4rem;
+	height: 4rem;
+	float: left;
+}
+.icon img{
+	width: 100%;
+	height: 100%;
+}
+.danci-text{
+	float: left;
+}
+.danci-text p{
+	font-size: 1.2rem;
+	padding: 0.5rem 0 0 2rem;
+}
+.fenlei{
+  width: 100%;
+  // height: 100%;
+  // background: red;
+  // border: 1px solid #000;
+  // box-sizing: border-box;
+  position: relative;
+}
+.fenlei-auto{
+  width: 56%;
+  // height: 50%;
+  // background: yellow;
+  margin: 4rem auto;
+  // top: 50%;
+  // left: 50%;
+  // margin-top: -25%;
+  // margin-left: -25%;
+}
+// .fenlei-auto ul{
+//   // width: 60%;
+//   // height: 100%;
+//   // background: pink;
+//   margin: 0 auto;
+//   position: relative;
+// }
+// .img{
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+// }
+.swiper-slide img{
+  width: 100%;
+  height: 100%;
+}
+.swiper-container {
+    width: 75%;
+    height: 70%;
+    border-radius: 20px;
+}
+.btn{
+  width: 60%;
+  // height: 20px;
+  background: red;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+
+
+

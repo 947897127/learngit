@@ -1,0 +1,199 @@
+ body {
+    width: 100%;
+    overflow: hidden;
+}
+.back-img{
+	background:url(../img/bg.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+nav{
+	width: 100%;
+	height: 2.18rem;
+	position: absolute;
+	top: 1.5rem;
+	left: 0;
+}
+nav ul{
+	width: 95%;
+	height: 100%;
+	margin: 0 auto;
+}
+nav ul li{
+	width: 2.87rem;
+	height: 100%;
+	background: url(../img/return.png) no-repeat;
+}
+.mifeng{
+	width: 100%;
+	height: 10.1rem;
+	padding: 1rem 0 1rem 0;
+}
+.mifeng-auto{
+	width: 7.3rem;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	
+}
+.text{
+	width: 1.9rem;
+    height: 3rem;
+    background: #ffffff;
+    position: absolute;
+    top: 4.25rem;
+    left: 3.4rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.fenlei{
+  width: 100%;
+  height: 60%;
+  
+}
+.fenlei-auto{
+  width:100%;
+  height: 100%;
+  padding: 3rem 0 0 0;
+  display: none;
+
+}
+.one{
+	display: block;
+}
+.day{
+  width: 40%;
+  height: 60%;
+  margin: 0 1.5rem 0 1.5rem;
+}
+.backimg{
+	border-radius: 1.5rem;
+}
+.backimg img{
+	width: 100%;
+	height: 100%;
+}
+.text-h1{
+	width: 100%;
+	height: 20%;
+	padding-top: 1.8rem;
+	
+}
+.text-h1 h1{
+	text-align: center;
+	font-size: 2.5rem;
+	
+}
+.text-p{
+	width: 100%;
+	height: 20%;
+	padding-top: 1.8rem;
+}
+.text-p p{
+	font-size: 3rem;
+	display: block;
+	text-align: center;
+	font-weight:lighter;	
+}
+.text-icon{
+	width: 100%;
+	height: 25%;
+	padding-top: 1rem;
+	display: block;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ 
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */ 
+    display: -ms-flexbox; /* TWEENER - IE 10 */ 
+    display: -webkit-flex; /* NEW - Chrome */ 
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-box-pack: center;
+    /* 12版 */
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+  /* 09版 */
+    -webkit-box-align: center;
+  /* 12版 */
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+}
+.auto{
+	display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ 
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */ 
+  display: -ms-flexbox; /* TWEENER - IE 10 */ 
+  display: -webkit-flex; /* NEW - Chrome */ 
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-box-pack: center;
+  /* 12版 */
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  /* 09版 */
+  -webkit-box-align: center;
+  /* 12版 */
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+      width: 100%;
+    height: 100%;
+}
+.icon{
+	width: 3.2rem;
+	height: 3.2rem;
+	margin: 0 1.5rem 0 1.5rem;
+}
+.zt{
+	position: relative;
+	background: url(../img/bofang.png) no-repeat;
+	background-size: 100% 100%;
+	
+	
+}
+.ly{
+	position: relative;
+}
+.border-px{
+	// width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	border: 0.1rem solid red;
+	box-sizing: border-box;
+}
+.zt1{
+	background: url(../img/zhenting.png) no-repeat;
+	background-size: 100% 100%;
+}
+.ly{
+	background: url(../img/luyin.png) no-repeat;
+	background-size: 100% 100%;
+}
+.bf{
+	background: url(../img/bf.png) no-repeat;
+	background-size: 100% 100%;
+}
+.b1{
+	background: url(../img/bf.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+#canvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#mycanvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta name="x5-orientation" content="portrait">
+	<link href="css/fenlei5.css" rel="stylesheet" type="text/css"/>
+	<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+	<script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.js"></script>
+	<script src="js/jquery.js"></script>
+	<title>Document</title>
+	<style>
+		.one{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="back-img">
+		<nav>
+			<ul>
+				<li style="display: block;float: left;"></li>
+			</ul>
+		</nav>
+		<div class="mifeng">
+			<div class="mifeng-auto">	
+				<img src="img/one.png" alt="">
+				<div class="text">1</div>
+			</div>
+		</div>
+		
+		<div class="fenlei">
+			<div class="fenlei-auto" >
+				<div class="day backimg">
+					<img src="img/elephent.png" alt="">
+				</div>
+				<div class="day tingdu">
+					<div class="text-h1"><h1>Elephant</h1></div>
+					<div class="text-p"><p>大象</p></div>
+					<div class="text-icon">
+						<div class="icon bf"></div>
+						<div class="icon ly">
+							<canvas id="canvas" width="50" height="50"></canvas>
+						</div>
+						<div class="icon zt">
+							<canvas id="mycanvas" width="50" height="50"></canvas>
+						</div>
+				</div>
+			</div>
+		</div>
+			<div id="progress">
+      <span></span>
+</div>
+	</div>
+
+</body>
+<script>
+$(function(){
+	//300毫秒延迟   
+    FastClick.attach(document.body);    
+	//监听屏幕大小
+	 var width=$(window).width()
+ 	 var height=$(window).height()
+ 	 $(".back-img").css({
+ 	 	width:width,
+ 	 	height:height
+ 	 })	
+ 	 //
+ 	 $(window).resize(function() {
+  		var width=$(window).width()
+	 	var height=$(window).height()
+	 	$(".back-img").css({
+	 		width:width,
+	 	 	height:height
+	 	})	
+	})
+ 	 
+ 	//click点击切换图片
+ 	
+
+ 	//canvas
+ 	var stop=null
+ 	var canvas = document.getElementById('canvas'),  //获取canvas元素
+            context = canvas.getContext('2d'),  //获取画图环境，指明为2d
+            centerX = canvas.width/2,   //Canvas中心点x轴坐标
+            centerY = canvas.height/2,  //Canvas中心点y轴坐标
+            rad = Math.PI*2/100, //将360度分成100份，那么每一份就是rad度
+            speed = 0.1; //加载的快慢就靠它了 
+        // 绘制蓝色外圈
+        function blueCircle(n){
+            context.save();
+            context.strokeStyle = "#fff"; //设置描边样式
+            context.lineWidth = 2; //设置线宽
+            context.beginPath(); //路径开始
+            context.arc(centerX, centerY, 24 , -Math.PI/2, -Math.PI/2 +n*rad, false); //用于绘制圆弧context.arc(x坐标，y坐标，半径，起始角度，终止角度，顺时针/逆时针)
+            context.stroke(); //绘制
+            context.closePath(); //路径结束
+            context.restore();
+        }
+        //绘制白色外圈
+        function whiteCircle(){
+            context.save();
+            context.beginPath();
+            context.strokeStyle = "white";
+            context.arc(centerX, centerY, 100 , 0, Math.PI*2, false);
+            context.stroke();
+            context.closePath();
+            context.restore();
+        }  
+        function drawFrame(){
+            stop=window.requestAnimationFrame(drawFrame, canvas);
+            ;
+            whiteCircle();
+            blueCircle(speed);
+            speed +=0.1;
+            // console.log(speed)
+            if(speed >= 100) {
+            	speed = 0
+            	context.clearRect(0, 0, canvas.width, canvas.height)
+            window.cancelAnimationFrame(stop)
+            };
+        };
+        $(".ly").click(function(){
+        	drawFrame()
+        })
+        //canvas2
+        var mycanvas = document.getElementById('mycanvas'),  //获取canvas元素
+            con = mycanvas.getContext('2d'),  //获取画图环境，指明为2d
+            cenX = mycanvas.width/2,   //Canvas中心点x轴坐标
+            cenY = mycanvas.height/2,  //Canvas中心点y轴坐标
+            rads = Math.PI*2/100, //将360度分成100份，那么每一份就是rad度
+            speeds = 0.1; //加载的快慢就靠它了 
+        // 绘制蓝色外圈
+        function blue(n){
+            con.save();
+            con.strokeStyle = "#fff"; //设置描边样式
+            con.lineWidth = 2; //设置线宽
+            con.beginPath(); //路径开始
+            con.arc(cenX, cenY, 24 , -Math.PI/2, -Math.PI/2 +n*rads, false); //用于绘制圆弧context.arc(x坐标，y坐标，半径，起始角度，终止角度，顺时针/逆时针)
+            con.stroke(); //绘制
+            con.closePath(); //路径结束
+            con.restore();
+        }
+        //绘制白色外圈
+        function white(){
+            con.save();
+            con.beginPath();
+            con.strokeStyle = "white";
+            con.arc(cenX, cenY, 100 , 0, Math.PI*2, false);
+            con.stroke();
+            con.closePath();
+            con.restore();
+        }  
+        function draw(){
+            s=window.requestAnimationFrame(draw, mycanvas);
+            ;
+            white();
+            blue(speeds);
+            speeds +=0.1;
+            if(speeds >= 100) {
+            	speeds = 0
+            	con.clearRect(0, 0, mycanvas.width, mycanvas.height)
+            	$(".zt").removeClass('zt1')
+            	flag=true
+            window.cancelAnimationFrame(s)
+            };
+        };
+        var flag=true
+        $(".zt").click(function(){
+        	if(flag){
+        		$(".zt").toggleClass('zt1')
+       			draw()
+       			flag=false
+        	}
+            
+    	})
+        // //阻止浏览器下拉事件
+        $('body').on('touchmove', function (event) {event.preventDefault();});
+
+})
+
+</script>
+</html>

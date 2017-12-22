@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>h5 demo</title>
+</head>
+<body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/fenlei7.css" rel="stylesheet" type="text/css"/>
+	<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+	<script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.js"></script>
+	<script src="js/jquery.js"></script>
+</head>
+<body oncontextmenu="return false;" onselectstart="return false;">
+<div class="fenlei-auto">
+				<!-- <ul class="auto"> -->
+					<!-- <li class="word"> -->
+						<!-- <div class="back"><img src="img/snake.png" alt=""></div> -->
+						<!-- <div class="canvas"><div class="canvas-auto"><canvas id="canvas" width="266" height="108"></canvas></div></div> -->
+					<!-- </li> -->
+					<li class="lx">
+						<div class="kuang left">
+							<div class="text-kuang"><p>sn</p><div class="yuan"></div></div>
+							<div class="text-kuang"><p>sc</p><div class="yuan"></div></div>
+							<div class="text-kuang"><p>gr</p><div class="yuan"></div></div>
+							<div class="text-kuang"><p>1o</p><div class="yuan"></div></div>
+						</div>
+						<div class="kuang right">
+							<div class="text-kuang"><p>een</p><div class="yuan"></div></div>
+							<div class="text-kuang"><p>qas</p><div class="yuan"></div></div>
+							<div class="text-kuang"><p>ng</p><div class="yuan"></div></div>
+							<div class="text-kuang"><p>ary</p><div class="yuan"></div></div>
+						</div>
+						<canvas id="mycanvas" style="background: yellow" height="461" width="461"></canvas>
+					</li>
+					
+				<!-- </ul> -->
+			</div>
+<script>
+var mycanvas = document.getElementById('mycanvas'),
+ 		myctx = mycanvas.getContext('2d');		
+ 	var lxw=$(".lx").width()
+ 	var lxh=$(".lx").height()
+ 	    mycanvas.height = 461
+		mycanvas.width = 461
+	var x_star,y_star,x_end,y_end;
+	$(".yuan").each(function(index, element) {
+		$(this).bind("touchstart",function(e){
+			x_star=e.originalEvent.targetTouches[0].pageX
+			y_star=e.originalEvent.targetTouches[0].pageY
+			x =  event.touches[0].clientX - mycanvas.offsetLeft;
+			y = event.touches[0].clientY - mycanvas.offsetTop;
+		})
+		$(this).bind("touchmove",function(e){
+				console.log("yundong")
+				
+		})
+		$(this).bind("touchend",function(e){
+			x_end=e.originalEvent.changedTouches[0].pageX
+			y_end=e.originalEvent.changedTouches[0].pageY
+			console.log(x_end,y_end)
+			startline()
+		})
+	})
+
+	function startline(){
+		 myctx.clearRect(0,0,lxw,lxh);
+		 myctx.save();  
+		 myctx.beginPath();  
+		 myctx.lineWidth = 2; 
+		 myctx.moveTo(x,y);  
+		 myctx.lineTo(x_end,y_end); 		 		 
+		 myctx.strokeStyle = "red"; 
+		 myctx.stroke();  
+		 myctx.restore(); 
+	}
+</script>
+</body>
+</html>

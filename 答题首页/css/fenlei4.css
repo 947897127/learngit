@@ -1,0 +1,184 @@
+ body {
+    width: 100%;
+    overflow: hidden;
+}
+.back-img{
+	background:url(../img/bg.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+nav{
+	width: 100%;
+	height: 2.18rem;
+	position: absolute;
+	top: 1.5rem;
+	left: 0;
+}
+nav ul{
+	width: 95%;
+	height: 100%;
+	margin: 0 auto;
+}
+nav ul li{
+	width: 2.87rem;
+	height: 100%;
+	background: url(../img/return.png) no-repeat;
+}
+.mifeng{
+	width: 100%;
+	height: 10.1rem;
+	padding: 1rem 0 1rem 0;
+}
+.mifeng-auto{
+	width: 7.3rem;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	
+}
+.text{
+	width: 1.9rem;
+    height: 3rem;
+    background: #ffffff;
+    position: absolute;
+    top: 4.25rem;
+    left: 3.4rem;
+}
+.danci{
+
+	width: 100%;
+	height: 8%;
+}
+.danci-auto{
+	display: flex;
+  	justify-content:center;
+  	align-items: center;
+	width: 50%;
+	height: 100%;
+	margin: 0 auto;
+}
+.icon{
+	width: 4rem;
+	height: 4rem;
+	float: left;
+}
+.icon img{
+	width: 100%;
+	height: 100%;
+}
+.danci-text{
+
+	float: left;
+}
+.danci-text p{
+	font-size: 1.2rem;
+	padding: 0.5rem 0 0 2rem;
+}
+.fenlei{
+  width: 100%;
+  height: 60%;
+  
+}
+.fenlei-auto{
+  width:100%;
+  height: 100%;
+  padding: 3rem 0 0 0;
+  display: none;
+
+}
+.cai{
+	width: 100%;
+	padding: 1rem 0 0 0;
+	display: flex;
+  	justify-content:center;
+  	align-items: center;
+}
+.dc{
+	height: 12%;
+}
+.imgs{
+	height:50%;
+}
+.fang{
+	height: 12%;
+
+}
+.tuo{
+	height: 12%;
+	position: relative;
+}
+.flex-text{
+	width: 15%;
+	height: 88%;
+	margin-left: 3rem;
+	position: relative;
+	// position: absolute;
+	
+}
+.touch{
+	position: absolute;
+}
+.one{
+	left: 10%;
+	top: 0;
+}
+.two{
+	left: 30%;
+	top: 0;
+}
+.tree{
+	left: 50%;
+	top: 0;
+}
+.front{
+	left: 70%;
+	top: 0;
+}
+.flex-text input{
+	display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.border-a{
+	border-radius: 2.5rem;
+	overflow: hidden;
+}
+.text-dc{
+	font-size: 1.2rem;
+	// background: red;
+}
+.text-dc p{
+	display: inline-block;
+	width: 100%;
+	height: 3rem;
+	text-align: center;
+	line-height: 3rem;
+	
+}
+.imgs-dc{
+	width: 100%;
+	height: 100%;
+}
+.imgs-dc img{
+	width: 100%;
+	height: 100%;
+}
+.input{
+	width: 100%;
+	height: 100%;
+}
+.input p{
+	position: absolute;
+    top: 1rem;
+    left: 2.8rem;
+    font-size: 1rem;
+}
+.input img{
+	width: 100%;
+	height: 100%; 
+}

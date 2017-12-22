@@ -1,0 +1,165 @@
+ body {
+    width: 100%;
+    overflow: hidden;
+}
+.back-img{
+	background:url(../img/bg.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+nav{
+	width: 100%;
+	height: 2.18rem;
+	position: absolute;
+	top: 1.5rem;
+	left: 0;
+}
+nav ul{
+	width: 95%;
+	height: 100%;
+	margin: 0 auto;
+}
+nav ul li{
+	width: 2.87rem;
+	height: 100%;
+	background: url(../img/return.png) no-repeat;
+}
+.mifeng{
+	width: 100%;
+	height: 10.1rem;
+	padding: 1rem 0 1rem 0;
+}
+.mifeng-auto{
+	width: 7.3rem;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	
+}
+.text{
+	width: 1.9rem;
+    height: 3rem;
+    background: #ffffff;
+    position: absolute;
+    top: 4.25rem;
+    left: 3.4rem;
+}
+.danci{
+	width: 100%;
+	height: 8%;
+}
+.danci-auto{
+	width: 50%;
+	height: 100%;
+	margin: 0 auto;
+}
+.icon{
+	width: 4rem;
+	height: 4rem;
+	float: left;
+}
+.icon img{
+	width: 100%;
+	height: 100%;
+}
+.danci-text{
+	float: left;
+}
+.danci-text p{
+	font-size: 1.2rem;
+	padding: 0.5rem 0 0 2rem;
+}
+.fenlei{
+  width: 100%;
+  height: 32rem;
+  // background: red;
+  // border: 1px solid #000;
+  // box-sizing: border-box;
+  position: relative;
+}
+.fenlei-auto{
+  width:80%;
+  height: 50%;
+  // background: yellow;
+  margin: 4rem auto;
+  display: none;
+}
+.one{
+	display: block;
+}
+.fl-ul{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+.fl-li{
+	width: 70%;
+	height: 100%;
+	// background: pink;
+	margin: 0 auto;
+}
+.title-text{
+	width: 100%;
+	height: 2rem;
+	// background: #fff;
+	font-size: 1.2rem;
+	line-height: 2rem;
+}
+.title{
+	margin-left: 1.2rem;
+	// font-family: Lucida Console, Monaco, Courier New, mono, monospace;;
+}
+.backimg{
+	width: 80%;
+	height: 87%;
+	// background: #000;
+	float: left;
+}
+.backimg img{
+	margin-top: 1rem;
+	margin-left: 1.8rem;
+}
+.backiocn{
+	width: 20%;
+	height: 87%;
+	// background: red;
+	float: left;
+	position: relative;
+}
+.panduan{
+	width: 100%;
+	height: 50%;
+	position: relative;
+	// background: yellow;
+}
+.panduan .yess{
+	margin-top: 2rem;
+	
+}
+.panduan .true{
+	position: absolute;
+	top: 2.5rem;
+	left: 0.3rem;
+	display: none;
+}
+.panduan .nos{
+	margin-top: 2rem;
+}
+.panduan .false{
+	margin-top: 2rem;
+	position: absolute;
+	top: 0.3rem;
+	left: 0.3rem;
+	display: none;
+}
+
+.jiade{
+	display:none;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	background: red;
+	top: 50%;
+    position: absolute;
+    z-index: 99999;
+}
