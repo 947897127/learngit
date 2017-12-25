@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name=”viewport” content=”width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes” />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta name="x5-orientation" content="portrait">
+	<link href="css/fenlei61.css" rel="stylesheet" type="text/css"/>
+	<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+	<script src="js/jquery.js"></script>
+	<script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="back-img">
+		<nav>
+			<ul>
+				<li style="display: block;float: left;"></li>
+				<div style="display: block;float: left; height: 100%;line-height: 2.25rem;padding: 0 0 0 1.5rem "><span>1</span>/<span>4</span></div>
+			</ul>
+		</nav>
+		<div class="mifeng">
+			<div class="mifeng-auto">
+				<img src="img/one.png" alt="">
+				<div class="text"></div>
+			</div>
+		</div>
+		
+		<div class="fanpai">
+		    <!-- <div class="auto"> -->
+
+				<div class="fanpai-auto one">
+						<div class="box">
+							<div class="flip">
+								<div class="side front"><img src="img/hz.png" alt="" ></div>
+								<div class="side back"><img src="img/qingwa.png" alt="" class="fa" index=0></div>
+							</div>
+							</div>
+							<div class="box">
+							<div class="flip">
+								<div class="side front"><img src="img/hz.png" alt=""></div>
+								<div class="side back"><img src="img/lu.png" alt=""  class="fa" index=1></div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="flip">
+								<div class="side front"><img src="img/hz.png" alt="" ></div>
+								<div class="side back"><img src="img/lu.png" alt=""  class="fa" index=1></div>
+								</div>
+							</div>
+							<div class="box">
+							<div class="flip">
+								<div class="side front"><img src="img/hz.png" alt=""></div>
+								<div class="side back"><img src="img/qingwa.png" alt=""  class="fa" index=0></div>
+							</div>
+							</div>
+
+				</div>
+			<!-- ==================================================================== -->
+				<div class="fanpai-auto">
+						<div class="box">
+							<div class="flip">
+								<div class="side front"><img src="img/hz.png" alt="" ></div>
+								<div class="side back"><img src="img/qingwa.png" alt="" class="fa" index=0></div>
+							</div>
+							</div>
+							<div class="box">
+							<div class="flip">
+								<div class="side front"><img src="img/hz.png" alt=""></div>
+								<div class="side back"><img src="img/lu.png" alt=""  class="fa" index=1></div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="flip">
+								<div class="side front"><img src="img/hz.png" alt="" ></div>
+								<div class="side back"><img src="img/lu.png" alt=""  class="fa" index=1></div>
+								</div>
+							</div>
+							<div class="box">
+							<div class="flip">
+								<div class="side front"><img src="img/hz.png" alt=""></div>
+								<div class="side back"><img src="img/qingwa.png" alt=""  class="fa" index=0></div>
+							</div>
+							</div>
+
+
+				</div>
+			<!-- ============================================================================= -->
+				<div class="fanpai-auto">
+						<div class="box">
+							<div class="flip">
+								<div class="side front"><img src="img/hz.png" alt="" ></div>
+								<div class="side back"><img src="img/qingwa.png" alt="" class="fa" index=0></div>
+							</div>
+							</div>
+							<div class="box">
+							<div class="flip">
+								<div class="side front"><img src="img/hz.png" alt=""></div>
+								<div class="side back"><img src="img/lu.png" alt=""  class="fa" index=1></div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="flip">
+								<div class="side front"><img src="img/hz.png" alt="" ></div>
+								<div class="side back"><img src="img/lu.png" alt=""  class="fa" index=1></div>
+								</div>
+							</div>
+							<div class="box">
+							<div class="flip">
+								<div class="side front"><img src="img/hz.png" alt=""></div>
+								<div class="side back"><img src="img/qingwa.png" alt=""  class="fa" index=0></div>
+							</div>
+							</div>
+
+				</div>
+			</div>
+		<!-- </div>	 -->
+	</div>
+</body>
+<script>
+$(function(){
+	FastClick.attach(document.body);
+	 var width=$(window).width()
+ 	 var height=$(window).height()
+ 	 $(".back-img").css({
+ 	 	width:width,
+ 	 	height:height
+ 	 })
+ 	 //调整分辨lv
+ 	 $(window).resize(function() {
+  		var width=$(window).width()
+	 	var height=$(window).height()
+	 	$(".back-img").css({
+	 		width:width,
+	 	 	height:height
+	 	})	
+	})
+ 	var num=3//auto总高度
+ 	var fanmian=-180//旋转图片
+ 	var arr=[]//保存src
+ 	var flag=false//默认false
+    var fanpaiH=$(".fanpai").height()
+    var d=0;
+    var l=0;
+    var f=0;
+    var arri=[]
+    var box=$(".fanpai-auto").find(".box")
+    var a,src,t;
+    // $(".auto").css({height:fanpaiH*num})
+
+ 	// $(".auto").animate({top:0+"px"},1000)
+
+ 	function top(){
+ 	var t=setTimeout(function(){
+		$(".flip").css({
+			'-o-transform':'rotateY('+fanmian+'deg)',
+			'-moz-transform':'rotateY('+fanmian+'deg)',
+			'-ms-transform':'rotateY('+fanmian+'deg)',
+			'-webkit-transform':'rotateY('+fanmian+'deg)',
+			'transform':'rotateY('+fanmian+'deg)'
+		});
+	 clearInterval(t)
+	},1000)
+	}
+	top()
+	function fan(){
+		$(".flip").css({
+	        '-o-transform':'rotateY('+0+'deg)',
+	        '-moz-transform':'rotateY('+0+'deg)',
+	        '-ms-transform':'rotateY('+0+'deg)',
+	        '-webkit-transform':'rotateY('+0+'deg)',
+	        'transform':'rotateY('+0+'deg)'
+	    });
+	}
+
+ 	t=setTimeout(function(){
+ 		fan()
+ 	
+ 		$(".fanpai-auto").find(".box").each(function(index){
+ 			$(this).click(function(){
+ 				// alert(index)
+ 				// return index
+ 			$(".box").find(".flip").eq(index).css({
+			    '-o-transform':'rotateY('+fanmian+'deg)',
+			    '-moz-transform':'rotateY('+fanmian+'deg)',
+			    '-ms-transform':'rotateY('+fanmian+'deg)',
+			    '-webkit-transform':'rotateY('+fanmian+'deg)',
+			    'transform':'rotateY('+fanmian+'deg)'
+	    	});
+	    	src=$(".back img").eq(index).attr("index")
+	    	a=index
+	    	arr.push(src)
+	    	arri.push(a)
+	    	console.log(arri)
+	    		if(arr.length==2){
+	    		if(arr[0]==arr[1]){
+
+	    				t=setTimeout(function(){
+		    				$('.box').eq(arri[0]).addClass("suoxiao")
+							$('.box').eq(arri[1]).addClass("suoxiao")
+							$('.box').eq(arri[0]).removeClass("fangda")
+							$('.box').eq(arri[1]).removeClass("fangda")
+		    				
+		    				arri=[]
+		    				clearInterval(t)
+	    				},1000)
+	    				t=setTimeout(function(){
+							$('.box').eq(arri[0]).addClass("fangda")
+							$('.box').eq(arri[1]).addClass("fangda")
+							clearInterval(t)
+	    				},500)		
+	    			d+=1
+	    			if(d>=2){
+
+	    					l+=1
+	    					t=setTimeout(function(){
+	    						$(".fanpai-auto").eq(f).css({display:"none"})
+								$(".fanpai-auto").eq(f+1).css({display:"block"})
+								f++;
+								 clearInterval(t)	    					
+	    					},2000)
+	    					t=setTimeout(function(){
+	    						$('.box').removeClass("suoxiao")
+								$('.box').removeClass("suoxaio")
+								 clearInterval(t)
+	    					},2000)
+	    					t=setTimeout(function(){
+	    						fan()
+	    						 clearInterval(t)
+	    					},3000)
+	    			    d=0;
+	    			}
+	    		arr=[]
+	    	}else{
+	    		arri=[]
+	    		arr=[];
+	    		setTimeout(function(){
+	    			fan()
+	    		},950)
+	    	}
+	    	}
+ 			})
+ 		})	
+ 	
+ 		 clearInterval(t)
+ 	},3000)
+
+
+ 	 //阻止页面刷新
+ 	$('body').on('touchmove', function (event) {event.preventDefault();});
+})
+
+</script>
+</html>
