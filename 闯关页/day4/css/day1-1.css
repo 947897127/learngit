@@ -1,0 +1,59 @@
+ body {
+    width: 100%;
+    overflow: hidden;
+    
+}
+// .back-img{
+// 	// background:url(../img/bg.jpg) no-repeat;
+// 	// background-size: 100% 100%;
+// 	// position: relative;
+// }
+nav{
+	width: 100%;
+	height: 0.34rem;
+	position: absolute;
+	top: 0.25rem;
+	left: 0;
+}
+nav ul{
+	width: 95%;
+	height: 100%;
+	margin: 0 auto;
+}
+nav ul li{
+	width: 0.45rem;
+	height: 100%;
+	background: url(../img/fh.png) no-repeat;
+}
+.fenlei{
+	width: 100%;
+	height: 100%;
+	background: red;
+}
+.bf{
+	width: 0.50rem;
+	height: 0.51rem;
+	background: url(../img/bofang.png) no-repeat;
+	position: absolute;
+	top:3rem;
+	right: 1.80rem;
+	font-size: 0;
+}
+.ly{
+	width: 0.50rem;
+	height: 0.51rem;
+	background: url(../img/luyin.png) no-repeat;
+	position: absolute;
+	top:5.7rem;
+	right: 3.8rem;
+	font-size: 0;
+}
+.zt{
+	width: 0.50rem;
+	height: 0.51rem;
+	background: url(../img/bf.png) no-repeat;
+	position: absolute;
+	top:5.7rem;
+	right: 3rem;
+	font-size: 0;
+}

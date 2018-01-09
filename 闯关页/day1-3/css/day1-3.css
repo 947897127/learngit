@@ -1,0 +1,134 @@
+ body {
+    width: 100%;
+    overflow: hidden;
+    
+}
+.back{
+	background:url(../img/background.jpg) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+nav{
+	width: 100%;
+	height: 0.34rem;
+	position: absolute;
+	top: 0.25rem;
+	left: 0;
+}
+nav ul{
+	width: 95%;
+	height: 100%;
+	margin: 0 auto;
+}
+nav ul li{
+	width: 0.45rem;
+	height: 100%;
+	background: url(../img/return.png) no-repeat;
+}
+.danci{
+	width: 100%;
+	height: 8%;
+	padding-top: 1rem;
+}
+.dancis{
+	width: 100%;
+	height: 8%;
+	padding-top: 0.8rem;
+}
+.danci-auto{
+	display: flex;
+  	justify-content:center;
+  	align-items: center;
+	width: 70%;
+	height: 0.6rem;
+	margin: 0 auto;
+	font-size: 0;
+}
+.icon{
+	width: 0.64rem;
+	height: 100%;
+
+}
+.icon img{
+	width: 100%;
+	height: 100%;
+
+}
+.danci-text p{
+	font-size: 0.25rem;
+	padding: 0.08rem 0 0 0.32rem;
+	color: #693A06;
+}
+.fenleif{
+  width: 100%;
+  height: 60%;
+  padding-top: 1rem;
+  
+}
+.fenlei-autof{
+  width:100%;
+  height: 100%;
+  display: none;
+
+}
+.wrapper{
+	width:100%;
+  	height: 100%;
+  	display: flex;
+  	justify-content:center;
+  	align-items: center;
+}
+.left_img{
+	width: 2.56rem;
+	height: 2.64rem;
+}
+.right_text{
+	width: 4.20rem;
+	height: 3rem;
+	background: url(../img/di.png) no-repeat;
+}
+.autos{
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+.ditu{
+	width: 3.66rem;
+	height: 0.54rem;
+	margin-top: 0.17rem;
+	margin-left: 0.25rem;
+	font-size: 0;
+	position: relative;
+}
+.ditu span{
+	display: block;
+	width: 60%;
+	height: 100%;
+	margin:0 auto;
+	color: #693A06;
+	line-height: 0.54rem;
+	font-size: 0.25rem;
+	
+}
+.A{
+	background: url(../img/A.png) no-repeat;
+}
+.B{
+	background: url(../img/B.png) no-repeat;
+}
+.C{
+	background: url(../img/C.png) no-repeat;
+}
+.D{
+	background: url(../img/D.png) no-repeat;
+}
+.dc{
+	width: 0.4rem;
+	height: 0.4rem;
+	position: absolute;
+	top: 0.08rem;
+	left: 0.08rem;
+	// display: none;
+}
+.dc img{
+	display: none;
+}

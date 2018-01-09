@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta name="x5-orientation" content="portrait">
+	<link href="css/fenlei1-2.css" rel="stylesheet" type="text/css"/>
+	<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+	<script src="js/rem.js"></script>
+	<script src="js/jquery.js"></script>
+	<title>Document</title>
+	<style>
+		.one{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="back-img">
+		<nav>
+			<ul>
+				<li style="display: block;float: left;font-size: 0;"><img src="img/fh.png" alt=""></li>
+				<div style="display: block;float: left; height: 100%;line-height: 0.36rem;padding: 0 0 0 0.24rem;font-size: 0.3rem;color: #693A06;"><span >1</span>/<span >4</span></div>
+			</ul>
+		</nav>
+		<div class="conernt">
+		<div class="danci">
+			<div class="danci-auto">
+				<div class="danci-text">
+					<p>Listen,choose the right picture</p>
+					<p style="font-weight:lighter;">听单词选图片</p>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="conernt">
+		<div class="dancis">
+			<div class="danci-auto">
+				<div class="danci-text">
+					<img src="img/listen.png" alt="">
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="fenlei">
+			<div class="fenlei-auto one" >
+				<ul class="cai imgs">
+					<li class="flex-text border-a">
+						<!-- <div class="text-dc"><p>Too Nughty</p></div> -->
+						<div class="imgs-dc"><img src="img/apple.png" alt="" index="3" class="imgbc">
+						<div class="pd">
+								<img src="img/false.png" alt="">
+								<img src="img/true.png" alt="">
+						</div>
+						</div>
+						
+					</li>
+					<li class="flex-text border-a" >
+						<!-- <div class="text-dc"><p>Too Scary</p></div> -->
+						<div class="imgs-dc"><img src="img/pear.png" alt="" index="0" class="imgbc">
+						<div class="pd">
+								<img src="img/false.png" alt="">
+								<img src="img/true.png" alt="">
+						</div>
+						</div>
+					</li>
+					<li class="flex-text border-a">
+						<!-- <div class="text-dc"><p>Too Tall</p></div> -->
+						<div class="imgs-dc"><img src="img/plum.png" alt="" index="1" class="imgbc">
+						<div class="pd">
+								<img src="img/false.png" alt="">
+								<img src="img/true.png" alt="">
+						</div>
+						</div>
+					</li>
+					<li class="flex-text border-a">
+						<!-- <div class="text-dc"><p>Too Grumpy</p></div> -->
+						<div class="imgs-dc"><img src="img/strawberry.png" alt="" index="2" class="imgbc">
+						<div class="pd">
+								<img src="img/false.png" alt="">
+								<img src="img/true.png" alt="">
+						</div>
+						</div>
+					</li>
+				</ul>
+
+
+		</div>
+		</div>
+	</div>
+</body>
+<script>
+$(function(){
+	//监听屏幕大小
+	 var width=$(window).width()
+ 	 var height=$(window).height()
+ 	 $(".back-img").css({
+ 	 	width:width,
+ 	 	height:height
+ 	 })	
+
+
+ 	
+        // //阻止浏览器下拉事件
+        $('body').on('touchmove', function (event) {event.preventDefault();});
+
+})
+
+</script>
+</html>

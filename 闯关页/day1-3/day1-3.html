@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta name="x5-orientation" content="portrait">
+	<link href="css/day1-3.css" rel="stylesheet" type="text/css"/>
+	<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+	<script src="js/rem.js"></script>
+	<script src="js/jquery.js"></script>
+	<title>Document</title>
+	<style>
+		.one{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="back">
+		<nav>
+			<ul>
+				<li style="display: block;float: left;font-size: 0;"><img src="img/fh.png" alt=""></li>
+				<div style="display: block;float: left; height: 100%;line-height: 0.36rem;padding: 0 0 0 0.24rem;font-size: 0.3rem;color: #693A06;"><span >1</span>/<span >4</span></div>
+			</ul>
+		</nav>
+		<div class="conernt">
+		<div class="danci">
+			<div class="danci-auto">
+				<div class="danci-text">
+					<p>Look at picture ,choose the right word</p>
+					<p style="font-weight:lighter;">看图片选择正确的单词</p>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="fenleif">
+			<div class="fenlei-autof" >
+				<ul class="wrapper">
+					<li class="autos left_img"><img src="img/apple1.png" alt=""></li>
+					<li class="autos right_text">
+						<div class="ditu A">
+						<div class="dc">
+							<img src="img/false.png" alt="" class="flase">
+							<img src="img/true.png" alt="" class="true">
+						</div>
+						<span index="Apple">Apple</span></div>
+						<div class="ditu B">
+						<div class="dc">
+							<img src="img/false.png" alt="" class="flase">
+							<img src="img/true.png" alt="" class="true">
+						</div>
+						<span index="1">Plum</span></div>
+						<div class="ditu C">
+						<div class="dc">
+							<img src="img/false.png" alt="" class="flase">
+							<img src="img/true.png" alt="" class="true">
+						</div>
+						<span index="2">Banana</span></div>
+						<div class="ditu D">
+						<div class="dc">
+							<img src="img/false.png" alt="" class="flase">
+							<img src="img/true.png" alt="" class="true">
+						</div>
+						<span index="3">Watermelon</span></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+$(function(){
+	//监听屏幕大小
+	 var width=$(window).width()
+ 	 var height=$(window).height()
+ 	 $(".back").css({
+ 	 	width:width,
+ 	 	height:height
+ 	 })	
+
+ 	 //抖动
+ 	function doudong(i){
+		var b=0; 
+		u=setInterval(function(){ 
+		 $(".ditu").eq(i).css({left:(b++)%4<2?0:4,top:(b++)%4<2?0:4})
+		if(b>15){
+			clearInterval(u);
+			b=0
+		} 
+		},32) 
+ 	}
+
+ 	 $(".ditu").each(function(i){
+ 	 	$(this).click(function(){
+ 	 		var left_text=$(this).find("span").html()
+ 	 		var left_index=$(this).find("span").attr("index")
+ 	 		if(left_text==left_index){
+ 	 			$(this).find(".true").eq(i).css({display:"block"})
+ 	 		}else{
+ 	 			doudong(i)
+ 	 		}
+ 	 		
+ 	 	})
+ 	 })
+ 	
+        // //阻止浏览器下拉事件
+        $('body').on('touchmove', function (event) {event.preventDefault();});
+
+})
+
+</script>
+</html>

@@ -1,0 +1,177 @@
+ body {
+    width: 100%;
+    overflow: hidden;
+    
+}
+.bgimg{
+	background:url(../img/background.jpg) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+nav{
+	width: 100%;
+	height: 0.34rem;
+	position: absolute;
+	top: 0.25rem;
+	left: 0;
+}
+nav ul{
+	width: 95%;
+	height: 100%;
+	margin: 0 auto;
+}
+nav ul li{
+	width: 0.45rem;
+	height: 100%;
+}
+// .conernt{
+// 	widows: 100%;
+// 	height: auto;
+// 	// padding-top: 1rem;
+// }
+.danci{
+	width: 100%;
+	height: 8%;
+	padding-top: 1rem;
+}
+.danci-auto{
+	display: flex;
+  	justify-content:center;
+  	align-items: center;
+	width: 50%;
+	height: 0.6rem;
+	margin: 0 auto;
+	font-size: 0;
+}
+.icon{
+	width: 0.64rem;
+	height: 100%;
+
+}
+.icon img{
+	width: 100%;
+	height: 100%;
+
+}
+.danci-text p{
+	font-size: 0.25rem;
+	padding: 0.08rem 0 0 0.32rem;
+	color: #693A06;
+}
+.fenleig{
+  width: 100%;
+  height: 60%;
+  padding-top: 1rem;
+  
+}
+.fenlei-autog{
+  width:100%;
+  height: 100%;
+  display: none;
+
+}
+.cai{
+	width: 100%;
+	display: flex;
+  	justify-content:center;
+  	align-items: center;
+  	font-size: 0;
+}
+.dc{
+	height: 12%;
+}
+.imgs{
+	height:50%;
+}
+.fang{
+	height: 0.7rem;
+	padding-top: 0.5rem;
+
+}
+.tuo{
+	height: 0.45rem;
+	position: relative;
+}
+.flex-text{
+	
+	margin-left: 0.24rem;
+	margin-right: 0.24rem;
+	position: relative;
+	// position: absolute;
+	
+}
+.touch{
+	width: 1.75rem;
+	position: absolute;
+}
+.one{
+	left: 6%;
+	top: 0;
+}
+.two{
+	left: 29%;
+	top: 0;
+}
+.tree{
+	left: 51%;
+	top: 0;
+}
+.front{
+	left: 74%;
+	top: 0;
+}
+.flex-text .input{
+	width: 1.76rem;
+	height:0.57rem;
+}
+.border-a{
+	width: 1.29rem;
+	height:1.45rem;
+	border-radius: 0.2rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	overflow: hidden;
+}
+.text-dc{
+	font-size: 0.192rem;
+	padding-top: 0.5rem;
+	// background: red;
+}
+.text-dc p{
+	display: inline-block;
+	width: 100%;
+	height: 0.48rem;
+	text-align: center;
+	line-height: 0.48rem;
+	color: #693A06;
+	font-size: 0.25rem;
+	
+}
+.imgs-dc{
+	width: 100%;
+	height: 100%;
+}
+.imgs-dc img{
+	width: 100%;
+	height: 100%;
+}
+.input{
+	width: 100%;
+	height: 100%;
+}
+.input p{
+	position: absolute;
+	top: 0;
+	left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 0.57rem;
+    line-height: 0.57rem;
+    text-align: center;
+    color: #693A06;
+    font-size: 0.25rem;
+}
+.input img{
+	width: 100%;
+	height: 100%; 
+}
